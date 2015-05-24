@@ -81,7 +81,7 @@ public class Zombie : MonoBehaviour
 	
 	void OnTriggerEnter(Collider trigger)
 	{
-		if(!isTriggered && tag=="Zombie" && trigger.name=="WarningTrigger")
+		if(!isTriggered && trigger.name=="WarningTrigger")
 		{ 
 			BackWarning.zombiesInTrigger++;
 			isTriggered=true;
@@ -89,7 +89,7 @@ public class Zombie : MonoBehaviour
 	}
 	void OnTriggerExit(Collider trigger)
 	{
-		if(isTriggered && tag=="Zombie" && trigger.name=="WarningTrigger")
+		if(isTriggered && trigger.name=="WarningTrigger")
 		{ 
 			BackWarning.zombiesInTrigger--;
 			isTriggered=false;
